@@ -5,12 +5,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --config devtools/webpack/dev.js",
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --config devtools/webpack/dev.js",
     "build": "cross-env NODE_ENV=production webpack --progress --config devtools/webpack/prod.js",
     "analyze": "cross-env NODE_ENV=production webpack --progress --config devtools/webpack/analyze.js"
   },
   "dependencies": {
-    "@reach/window-size": "^0.10.3",
     "aos": "^3.0.0-beta.6",
     "compression": "^1.7.4",
     "core-js": "^3.1.4",
@@ -20,10 +20,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-id-swiper": "^3.0.0",
-    "react-lazy-images": "^1.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.7.16",
     "react-transition-group": "^4.3.0",
     "styled-components": "^4.3.2",
     "swiper": "^5.3.8"
