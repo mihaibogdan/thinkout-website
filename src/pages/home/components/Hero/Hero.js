@@ -1,36 +1,29 @@
 import React from 'react';
 
 import { Heading1, Paragraph } from 'assets/styles/typography';
-import Link from 'components/Link';
-import StartupThumb from 'assets/img/hero/image.png';
 import { ContentSection, ImageSection } from 'assets/styles/layout';
-
-import { HeroSection, CTARow } from './style';
+import Form from './Form';
+import { HeroSection } from './style';
 
 function Hero() {
   return (
     <>
       <HeroSection>
         <ContentSection>
-          <Heading1>Understand how money moves your business</Heading1>
-          <Paragraph margin="20px 0px 0px 0px" fontSize="18px">
-            ThinkOut is the online platform that delivers financial analysis and forecasting for
-            SMEs in just a few minutes, based on the transaction history from their bank accounts.
+          <Heading1>19 indicatori financiari importanți pentru tine și afacerea ta</Heading1>
+          <Paragraph margin="20px 0px 0px 0px">
+            Materialul cuprinde 4 categorii de indicatori pe care trebuie să îi ai în vedere pentru
+            o imagine financiară completă a companiei tale.
           </Paragraph>
-          <CTARow>
-            <Link
-              button
-              target="_blank"
-              href="https://wa.me/491702988400?text=Hi%20there!"
-              color="white"
-            >
-              SIGN UP
-            </Link>
-          </CTARow>
+          <Paragraph margin="20px 0px 0px 0px">
+            Află care indicatori se potrivesc domeniului tău, cum să îi calculezi, pe care îi poți
+            include în strategia de creștere a firmei tale și care te pot ajuta să iei deciziile
+            potrivite pentru afacerea ta.
+          </Paragraph>
         </ContentSection>
 
         <ImageSection right>
-          <img src={StartupThumb} alt="" />
+          <Form />
         </ImageSection>
       </HeroSection>
     </>

@@ -11,6 +11,7 @@
     "analyze": "cross-env NODE_ENV=production webpack --progress --config devtools/webpack/analyze.js"
   },
   "dependencies": {
+    "@rmwc/textfield": "^6.1.3",
     "aos": "^3.0.0-beta.6",
     "compression": "^1.7.4",
     "core-js": "^3.1.4",
@@ -30,6 +31,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@svgr/webpack": "^5.4.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -47,7 +49,6 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
     "react-hot-loader": "^4.12.0",
-    "react-svg-loader": "^3.0.3",
     "style-loader": "^0.23.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.35.2",

@@ -5,6 +5,10 @@ export const Section = styled.div`
   min-height: 60vh;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 export const ContentSection = styled.div`
@@ -31,6 +35,7 @@ export const ImageSection = styled.div`
   ${(props) => (props.right ? 'margin-left: 80px' : 'margin-right: 80px')}
   display: flex;
   align-items: center;
+  justify-content: center;
 
   img {
     max-width: ${(props) => (props.fluid ? '100%' : 'initial')};

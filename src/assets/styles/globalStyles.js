@@ -11,14 +11,14 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
 
     font-family: Roboto, sans-serif;
-    font-size: 15px;
     line-height: 1.74;
     color: ${({ theme }) => theme.palette.neutral.grey};
   }
 
-  body.video-open {
-    overflow: hidden;
-  }
+  :root {
+    --mdc-theme-primary: ${({ theme }) => theme.palette.primary.main};
+    --mdc-theme-secondary: ${({ theme }) => theme.palette.neutral.grey};
+}
 
   #root {
     height: 100%;

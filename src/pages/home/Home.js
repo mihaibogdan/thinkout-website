@@ -3,10 +3,7 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import Navbar from 'components/Navbar';
 import Hero from './components/Hero';
 
-const Accounts = lazy(() => import('./components/Accounts'));
-const Budgets = lazy(() => import('./components/Budgets'));
-const Pricing = lazy(() => import('./components/Pricing'));
-const Faq = lazy(() => import('./components/Faq'));
+const Content = lazy(() => import('./components/Content'));
 
 function Home() {
   useEffect(() => {
@@ -18,10 +15,7 @@ function Home() {
       <Navbar />
       <Hero />
       <Suspense fallback="">
-        <Accounts />
-        <Budgets />
-        <Pricing />
-        <Faq />
+        <Content />
       </Suspense>
     </>
   );

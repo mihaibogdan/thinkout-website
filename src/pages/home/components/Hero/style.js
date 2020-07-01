@@ -18,13 +18,3 @@ export const HeroSection = styled(Container)`
     }
   }
 `;
-
-export const CTARow = styled.div`
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`;

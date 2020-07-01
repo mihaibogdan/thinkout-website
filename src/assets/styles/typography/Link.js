@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Link = styled.a`
   color: ${({ theme }) => theme.palette.accent};
   ${(props) => props.color && `color: ${props.color};`}
-  font-size: 15px;
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 500;
   ${(props) => props.fontWeight && `font-weight: ${props.fontWeight}`}
