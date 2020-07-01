@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 import { Heading1, Paragraph } from 'assets/styles/typography';
 import { ContentSection, ImageSection } from 'assets/styles/layout';
@@ -7,7 +8,7 @@ import { HeroSection } from './style';
 
 function Hero() {
   return (
-    <>
+    <Element name="form">
       <HeroSection>
         <ContentSection>
           <Heading1>19 indicatori financiari importanți pentru tine și afacerea ta</Heading1>
@@ -26,7 +27,7 @@ function Hero() {
           <Form />
         </ImageSection>
       </HeroSection>
-    </>
+    </Element>
   );
 }
 

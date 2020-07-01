@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { Heading1, Paragraph } from 'assets/styles/typography';
-import Link from 'components/Link';
 import StartupThumb from 'assets/img/hero/image.png';
 import { ContentSection, ImageSection } from 'assets/styles/layout';
-import { Wrapper, OfferedBySection, CTARow } from './styles';
+import { Wrapper, OfferedBySection } from './styles';
 
 function OfferedBy() {
   return (
@@ -17,15 +16,10 @@ function OfferedBy() {
             antreprenorii care își doresc să țină sub control încasările și plățile, să planifice cu
             grijă viitorul propriei afaceri și să ia decizii informate de business.
           </Paragraph>
-          <CTARow>
-            <Link button target="_blank" href="https://app.thinkout.io/register-user" color="white">
-              ÎNCEARCĂ
-            </Link>
-          </CTARow>
         </ContentSection>
 
         <ImageSection right>
-          <img src={StartupThumb} alt="" />
+          <img height="550px" src={StartupThumb} alt="" />
         </ImageSection>
       </OfferedBySection>
     </Wrapper>

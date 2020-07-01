@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 import Link from 'components/Link';
 import Logo from 'assets/img/logo.svg';
 import { Container } from 'assets/styles/layout';
+import { SolidButton } from 'assets/styles/buttons';
 import { Nav } from './style';
 
 function Navbar() {
@@ -35,14 +37,18 @@ function Navbar() {
             <Logo width="162px" />
           </Link>
 
-          <Link
+          <SolidButton
             className="try-now"
-            target="_blank"
-            href="https://wa.me/491702988400?text=Hi%20there!"
-            button
+            onClick={() => {
+              scroller.scrollTo('form', {
+                duration: 250,
+                smooth: true,
+                offset: 10,
+              });
+            }}
           >
-            TRY IT NOW
-          </Link>
+            DESCARCĂ
+          </SolidButton>
         </Container>
       </Nav>
     </>

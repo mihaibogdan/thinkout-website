@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Events } from 'react-scroll';
 
 import { SolidButton } from 'assets/styles/buttons';
 import { Heading4, Paragraph, Caption } from 'assets/styles/typography';
@@ -14,6 +15,16 @@ function Form() {
     EMAIL: '',
     MMERGE2: '',
     MMERGE3: '',
+  });
+  const firstInput = useRef(null);
+  useEffect(() => {
+    Events.scrollEvent.register('end', (to) => {
+      if (to === 'form') {
+        firstInput.current?.getNativeInput_()?.focus();
+      }
+    });
+
+    return () => Events.scrollEvent.remove('end');
   });
 
   const onInputChange = (e) => {
@@ -67,6 +78,7 @@ function Form() {
         required
         value={form.FNAME}
         onChange={onInputChange}
+        foundationRef={firstInput}
       />
       <TextField
         className="field"
@@ -104,7 +116,7 @@ function Form() {
         <Link href="https://thinkout.io/ro/confidentialitate/" target="_blank">
           Politica de confidențialitate
         </Link>{' '}
-        ThinkOut
+        ThinkOut.
       </Caption>
       <SolidButton disabled={isLoading}>VREAU O COPIE GRATUITĂ A EBOOK-ULUI</SolidButton>
     </StyledForm>

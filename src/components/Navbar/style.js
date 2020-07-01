@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.1);
   transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  a.try-now {
+  .try-now {
     margin-left: auto;
   }
 
