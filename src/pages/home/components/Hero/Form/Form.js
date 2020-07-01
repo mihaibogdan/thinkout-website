@@ -18,6 +18,7 @@ function Form() {
     b_4038f975c51eb86cf9d408224_5cb3df8d0b: '',
   });
   const firstInput = useRef(null);
+
   useEffect(() => {
     Events.scrollEvent.register('end', (to) => {
       if (to === 'form') {
@@ -72,11 +73,11 @@ function Form() {
       </Paragraph>
 
       <Link button href="https://thinkout.io">
-        COUNTINUĂ CĂTRE SITE-UL NOSTRU
+        CONTINUĂ CĂTRE SITE-UL NOSTRU
       </Link>
     </SuccessMessage>
   ) : (
-    <StyledForm onSubmit={onSubmit} autoComplete="new-password">
+    <StyledForm onSubmit={onSubmit}>
       <TextField
         className="field"
         name="FNAME"

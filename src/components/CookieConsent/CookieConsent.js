@@ -17,7 +17,11 @@ function CookieNotice() {
       <Container>
         <Paragraph color="inherit">
           In order to give you a better service thinkout.io uses cookies. By continuing to browse
-          the site you are agreeing to our <Link href="/terms-and-conditions">use of cookies</Link>.
+          the site you are agreeing to our{' '}
+          <Link href="https://thinkout.io/ro/confidentialitate/" target="_blank">
+            use of cookies
+          </Link>
+          .
         </Paragraph>
         <SolidButton
           onClick={() => {
@@ -27,7 +31,7 @@ function CookieNotice() {
             }, 300);
           }}
         >
-          I AGREE
+          OK
         </SolidButton>
       </Container>
     </Wrapper>

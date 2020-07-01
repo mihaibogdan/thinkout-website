@@ -43,7 +43,7 @@ function Navbar() {
               scroller.scrollTo('form', {
                 duration: 250,
                 smooth: true,
-                offset: 10,
+                offset: -120,
               });
             }}
           >
