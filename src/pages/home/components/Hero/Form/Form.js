@@ -15,6 +15,7 @@ function Form() {
     EMAIL: '',
     MMERGE2: '',
     MMERGE3: '',
+    b_4038f975c51eb86cf9d408224_5cb3df8d0b: '',
   });
   const firstInput = useRef(null);
   useEffect(() => {
@@ -38,6 +39,11 @@ function Form() {
     e.preventDefault();
     setIsLoading(true);
 
+    const payload = { ...form };
+    if (!form.b_4038f975c51eb86cf9d408224_5cb3df8d0b) {
+      delete payload.b_4038f975c51eb86cf9d408224_5cb3df8d0b;
+    }
+
     await fetch(
       'https://thinkout.us12.list-manage.com/subscribe/post?u=4038f975c51eb86cf9d408224&amp;id=5cb3df8d0b',
       {
@@ -47,7 +53,7 @@ function Form() {
           'Content-Type': 'application/x-www-form-url-encoded',
           Accept: 'application/json',
         },
-        body: new URLSearchParams(form), // body data type must match "Content-Type" header
+        body: new URLSearchParams(payload),
       }
     );
 
@@ -104,6 +110,15 @@ function Form() {
         value={form.MMERGE3}
         onChange={onInputChange}
       />
+      <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+        <input
+          type="text"
+          name="b_4038f975c51eb86cf9d408224_5cb3df8d0b"
+          tabIndex="-1"
+          value={form.b_4038f975c51eb86cf9d408224_5cb3df8d0b}
+          onChange={onInputChange}
+        />
+      </div>
       <Caption>
         *Prin completarea formularului ești de acord cu abonarea la newsletterul ThinkOut.
       </Caption>

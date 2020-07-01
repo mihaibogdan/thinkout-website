@@ -33,7 +33,7 @@ function Navbar() {
     <>
       <Nav className={`${scrollStarted && 'scrolledNavbar'}`}>
         <Container>
-          <Link to="/">
+          <Link href="https://thinkout.io/">
             <Logo width="162px" />
           </Link>
 

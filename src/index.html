@@ -3,14 +3,119 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- START - Open Graph and Twitter Card Tags 2.3.3 -->
+    <!-- Facebook Open Graph -->
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:site_name" content="ThinkOut—Cash Flow Analysis and Forecasting" />
+    <meta property="og:title" content="Descoperă ThinkOut" />
+    <meta property="og:url" content="https://thinkout.io/ro/descopera/" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="ThinkOut este soluția care ajută antreprenorii să analizeze și să previzioneze încasările și plățile pe baza istoricului bancar."
+    />
+    <meta
+      property="og:image"
+      content="/wp-content/themes/thinkout/css/images/thinkout_facebook_share.png"
+    />
+    <meta
+      property="og:image:url"
+      content="/wp-content/themes/thinkout/css/images/thinkout_facebook_share.png"
+    />
+    <meta property="fb:app_id" content="1573396496306055" />
+    <!-- Google+ / Schema.org -->
+    <meta itemprop="name" content="Descoperă ThinkOut" />
+    <meta itemprop="headline" content="Descoperă ThinkOut" />
+    <meta
+      itemprop="description"
+      content="ThinkOut este soluția care ajută antreprenorii să analizeze și să previzioneze încasările și plățile pe baza istoricului bancar."
+    />
+    <meta
+      itemprop="image"
+      content="/wp-content/themes/thinkout/css/images/thinkout_facebook_share.png"
+    />
+    <meta itemprop="author" content="ThinkOut" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Descoperă ThinkOut" />
+    <meta name="twitter:url" content="https://thinkout.io/ro/descopera/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- SEO -->
+    <!-- Misc. tags -->
+    <!-- is_singular -->
+    <!-- END - Open Graph and Twitter Card Tags 2.3.3 -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="canonical" href="https://thinkout.io/ro/descopera/" />
     <title>ThinkOut</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TRJFCDV');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154980075-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-154980075-1');
+    </script>
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '319162251943141');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- Hotjar Tracking Code for http://thinkout.io -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 752361, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
   </body>
 </html>
