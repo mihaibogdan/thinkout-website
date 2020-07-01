@@ -18,6 +18,10 @@ export const Nav = styled.nav`
 
   .try-now {
     margin-left: auto;
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
   }
 
   &.scrolledNavbar {

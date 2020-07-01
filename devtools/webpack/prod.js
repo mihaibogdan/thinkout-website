@@ -6,6 +6,7 @@ const prodConfig = merge(common, {
   output: {
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
+    publicPath: './',
   },
   plugins: [new webpack.HashedModuleIdsPlugin()],
 });

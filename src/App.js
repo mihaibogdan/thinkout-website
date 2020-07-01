@@ -34,7 +34,7 @@ function App() {
         <Suspense fallback="">
           <CookieConsent />
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/ebook-indicatori-financiari">
               <Home />
             </Route>
           </Switch>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { rgba } from 'polished';
 
 export const SolidButton = styled.button`
-  padding: 18px 36px;
+  padding: 18px 24px;
   font-family: inherit;
   font-size: 15px;
   font-weight: 500;
