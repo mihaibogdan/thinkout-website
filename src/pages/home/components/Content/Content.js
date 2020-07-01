@@ -14,10 +14,9 @@ function Accounts() {
             src={BookCover}
             width="400"
             alt=""
-            data-aos-offset="100"
             data-aos="fade-up"
             data-aos-duration="600"
-            data-aos-delay="100"
+            data-aos-delay="50"
           />
         </ImageSection>
         <ContentSection data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
