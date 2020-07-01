@@ -17,6 +17,7 @@ export const ContentSection = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex-shrink: 0;
 
   @media screen and (max-width: 1024px) {
     width: 80%;
@@ -35,10 +36,13 @@ export const ImageSection = styled.div`
   ${(props) => (props.right ? 'margin-left: 80px' : 'margin-right: 80px')}
   display: flex;
   align-items: center;
-  justify-content: center;
 
   img {
     max-width: ${(props) => (props.fluid ? '100%' : 'initial')};
+  }
+
+  &.center {
+    justify-content: center;
   }
 
   @media screen and (max-width: 1024px) {

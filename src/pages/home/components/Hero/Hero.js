@@ -22,7 +22,7 @@ function Hero() {
           </Paragraph>
         </ContentSection>
 
-        <ImageSection right>
+        <ImageSection className="center" right>
           <Form />
         </ImageSection>
       </HeroSection>

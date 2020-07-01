@@ -4,6 +4,7 @@ import Navbar from 'components/Navbar';
 import Hero from './components/Hero';
 
 const Content = lazy(() => import('./components/Content'));
+const OfferedBy = lazy(() => import('./components/OfferedBy'));
 
 function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function Home() {
       <Hero />
       <Suspense fallback="">
         <Content />
+        <OfferedBy />
       </Suspense>
     </>
   );

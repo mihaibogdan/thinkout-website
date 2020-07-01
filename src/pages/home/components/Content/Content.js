@@ -1,7 +1,7 @@
 import React from 'react';
 
+import BookCover from 'assets/img/book-cover.png';
 import { Heading4, Paragraph } from 'assets/styles/typography';
-import Coperta2 from 'assets/img/coperta2.png';
 import { Section, Container, ContentSection, ImageSection } from 'assets/styles/layout';
 import { List, ListItem } from 'assets/styles/general/List';
 
@@ -9,8 +9,16 @@ function Accounts() {
   return (
     <Section>
       <Container>
-        <ImageSection fluid data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-          <img src={Coperta2} width="400" alt="" />
+        <ImageSection className="center" fluid>
+          <img
+            src={BookCover}
+            width="400"
+            alt=""
+            data-aos-offset="100"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay="100"
+          />
         </ImageSection>
         <ContentSection data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
           <Heading4>Ce vei găsi în interior?</Heading4>

@@ -6,6 +6,10 @@ export const Section = styled(Container)`
   min-height: 70vh;
   position: relative;
 
+  .cover {
+    margin-top: 100px;
+  }
+
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
