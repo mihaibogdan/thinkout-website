@@ -12,13 +12,21 @@ export const OfferedBySection = styled(Container)`
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
-    margin-top: 140px;
     align-items: center;
     min-height: initial;
 
     ${ImageSection} {
       margin: 30px 0;
       order: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    ${ImageSection} {
+      img {
+        width: 90%;
+        height: auto;
+      }
     }
   }
 `;

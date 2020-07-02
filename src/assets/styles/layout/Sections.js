@@ -21,13 +21,11 @@ export const ContentSection = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 80%;
-    align-items: center;
   }
 
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 15px;
-    align-items: center;
   }
 `;
 
