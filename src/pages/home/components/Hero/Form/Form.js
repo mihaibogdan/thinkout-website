@@ -65,7 +65,7 @@ function Form() {
   return success ? (
     <SuccessMessage>
       <Heading4>Spor la citit!</Heading4>
-      <Paragraph>Ebook-ul a fost trimis.</Paragraph>
+      <Paragraph>Ebook-ul a fost trimis pe email.</Paragraph>
       <Paragraph>
         Sperăm ca materialul pregătit de noi să îți fie de folos. Dacă vrei să împărtășești cu noi
         opinia ta despre informațiile prezente în ebook, dă-ne un semn pe{' '}

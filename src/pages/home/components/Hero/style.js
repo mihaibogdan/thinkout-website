@@ -17,4 +17,8 @@ export const HeroSection = styled(Container)`
       order: 0;
     }
   }
+
+  @media screen and (min-width: 1024px) and (max-height: 650px) {
+    min-height: 650px;
+  }
 `;
