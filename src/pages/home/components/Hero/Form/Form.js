@@ -11,11 +11,10 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [form, setForm] = useState({
-    FNAME: '',
-    EMAIL: '',
-    MMERGE2: '',
-    MMERGE3: '',
-    b_4038f975c51eb86cf9d408224_5cb3df8d0b: '',
+    fname: '',
+    email: '',
+    company: '',
+    jobTitle: '',
   });
   const firstInput = useRef(null);
 
@@ -40,36 +39,39 @@ function Form() {
     e.preventDefault();
     setIsLoading(true);
 
-    const payload = { ...form };
-    if (!form.b_4038f975c51eb86cf9d408224_5cb3df8d0b) {
-      delete payload.b_4038f975c51eb86cf9d408224_5cb3df8d0b;
-    }
+    const payload = { ...form, language: 'ro' };
 
-    await fetch(
-      'https://thinkout.us12.list-manage.com/subscribe/post?u=4038f975c51eb86cf9d408224&amp;id=5cb3df8d0b',
-      {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-url-encoded',
-          Accept: 'application/json',
-        },
-        body: new URLSearchParams(payload),
-      }
-    );
+    await fetch('https://thinkout.io/mailchimp/index.php', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
 
     setSuccess(true);
     setIsLoading(false);
+
+    window.gtag('event', 'filled-form', {
+      event_category: 'ro-ebook',
+    });
   };
 
   return success ? (
     <SuccessMessage>
       <Heading4>Spor la citit!</Heading4>
-      <Paragraph>Ebook-ul a fost trimis pe email.</Paragraph>
+      <Paragraph>Ebook-ul a fost trimis și va ajunge în inbox-ul tău în câteva minute.</Paragraph>
       <Paragraph>
         Sperăm ca materialul pregătit de noi să îți fie de folos. Dacă vrei să împărtășești cu noi
         opinia ta despre informațiile prezente în ebook, dă-ne un semn pe{' '}
         <Link href="mailto:office@thinkout.io">office@thinkout.io</Link>
+      </Paragraph>
+      <Paragraph>
+        Dacă nu mai vrei să aștepți, poți să îl descarci direct de{' '}
+        <Link href="https://thinkout.io/thinkout_indicatori_financiari_IMM.pdf" target="_blank">
+          aici
+        </Link>
+        .
       </Paragraph>
 
       <Link button href="https://thinkout.io">
@@ -77,38 +79,38 @@ function Form() {
       </Link>
     </SuccessMessage>
   ) : (
-    <StyledForm onSubmit={onSubmit}>
+    <StyledForm id="ebook-form" onSubmit={onSubmit}>
       <TextField
         className="field"
-        name="FNAME"
+        name="fname"
         label="Nume"
         required
-        value={form.FNAME}
+        value={form.fname}
         onChange={onInputChange}
         foundationRef={firstInput}
       />
       <TextField
         className="field"
-        name="EMAIL"
+        name="email"
         label="Adresă de e-mail"
         required
-        value={form.EMAIL}
+        value={form.email}
         onChange={onInputChange}
       />
       <TextField
         className="field"
-        name="MMERGE2"
+        name="company"
         label="Companie"
         required
-        value={form.MMERGE2}
+        value={form.company}
         onChange={onInputChange}
       />
       <TextField
         className="field"
-        name="MMERGE3"
+        name="jobTitle"
         label="Funcție"
         required
-        value={form.MMERGE3}
+        value={form.jobTitle}
         onChange={onInputChange}
       />
       <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
@@ -120,9 +122,6 @@ function Form() {
           onChange={onInputChange}
         />
       </div>
-      <Caption>
-        *Prin completarea formularului ești de acord cu abonarea la newsletterul ThinkOut.
-      </Caption>
       <Caption>
         Dacă ne lași datele tale înseamnă că ești de acord cu{' '}
         <Link href="https://thinkout.io/ro/termeni-si-conditii/" target="_blank">
